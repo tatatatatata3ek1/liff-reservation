@@ -17,7 +17,9 @@
         <p class="mt-3">タイヤの種類</p>
         <div>
             <input type="checkbox" name="udetate" value="夏タイヤ"> 夏タイヤ
-	    <input type="checkbox" name="udetate" value="冬タイヤ"> 冬タイヤ
+	</div>
+	<div>
+	    <input type="checkbox" name="fukkin" value="冬タイヤ"> 冬タイヤ
         </div>
         <p class="mt-3">その他（ご希望メーカー・予算等）</p>
         <div>
@@ -66,8 +68,9 @@
             $('form').submit(function () {
                 const name    = $('input[name="name"]').val();
                 const udetate = $('input[name="udetate"]').val();
+		const fukkin  = $('input[name="fukkin"]').val();
                 const sukuwat = $('input[name="sukuwat"]').val();
-                const msg = `タイヤサイズ：${name}\n種類：${udetate}\nその他：${sukuwat}`;
+                const msg = `タイヤサイズ：${name}\n${udetate}\n${fukkin}\nその他：${sukuwat}`;
                 sendText(msg);
                 return false;
             });
