@@ -67,7 +67,7 @@
         $(function () {
             $('form').submit(function () {
                 const name    = $('input[name="name"]').val();
-                const udetate = $('input[name="udetate"]:checked').map(function).val();
+                const udetate = $('input[name="udetate"]:checked').map(function(){return $(this).val();
                 const sukuwat = $('input[name="sukuwat"]').val();
                 const msg = `タイヤサイズ：${name}\n${udetate}\nその他：${sukuwat}`;
                 sendText(msg);
